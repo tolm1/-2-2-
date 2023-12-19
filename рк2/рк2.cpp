@@ -33,6 +33,8 @@ public:
     string get_name() {
         return name;
     }
+
+    ~Animal() {};
 };
 
 class Bird : public Animal {
@@ -48,6 +50,7 @@ public:
         cout << "Размах крыла - " << wing <<  endl;
     }
 
+    ~Bird() {};
 };
 
 class Mammal : public Animal {
@@ -62,7 +65,7 @@ public:
         Animal::display();
         cout << "Тип шерсти - " << wool << endl;
     }
-
+    ~Mammal() {};
 };
 
 void modifyAnimal(Animal* animal,string newname) {
